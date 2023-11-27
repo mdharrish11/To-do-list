@@ -15,7 +15,7 @@ function display(){
 
     todoli.innerHTML= ""
 arr.forEach(function(ele,i){
-todoli.innerHTML += "<li>" + ele + "<a onclick = funedit("+i+")> edit </a>"  + "</li>"
+todoli.innerHTML += "<li>" +"<a onclick = funedit("+i+")> edit </a>" +ele + "<a>|</a>"+"<a onclick = fundelete("+i+")> x </a>" + "</li>"
 })
 }
 
@@ -26,6 +26,12 @@ function funedit(i){
 
     arr.splice(i,1,newele)
    display()
+}
+
+function fundelete(i){
+    arr.splice(i,1)
+display()
+
 }
 
 
